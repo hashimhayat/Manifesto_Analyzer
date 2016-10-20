@@ -16,19 +16,22 @@ The reference key words or sentences are divided into two categories: left and r
 Left reference include words or phrases that are supported or rejected by the leftist
 parities and vice versa.
 
-Step 1: ###Fetching Data from the web
+Step 1: Fetching Data from the web
+
 The First step gets and downloads the manifesto in a text format directly from the
 web. Urllib, a python library to fetch the data. After the data is requested, it is
 converted into string format and then all the characters in the text are converted to
 lower case characters.
 
-Step 2: ###Removes old and temporary Ailes
+Step 2: Removes old and temporary Ailes
+
 This step removes any old and temporary data Tiles from the working directory.
 Step 3: Writes the data acquired form Step 1 on Aile
 The manifesto text data fetched from the web is written on a Tile in this step for
 backup and ofTline usage.
 
-Step 4: ###Extracts data from reference Ailes
+Step 4: Extracts data from reference Ailes
+
 In order to analyze the manifestos, the user can include reference Tiles that includes
 words, sentences or phrases that correspond to either political ideology (left or
 right). For instance, if leftist parties support the implementation of taxes, the user
@@ -42,7 +45,8 @@ The words in the reference Tiles are read from the text Tiles or the image Tiles
 included into LEFT and RIGHT lists. Unimportant words, symbols and spaces such as
 and, for, that are removed from the reference lists.
 
-Step 5: ###Performs Left and Right Analysis
+Step 5: Performs Left and Right Analysis
+
 In the Tinal stage, the program goes through each word in the LEFT and RIGHT lists
 and Tind those words in the manifesto data. For each word in the list, a function
 called the word_freq counts the number of instances that word was repeated and
@@ -55,7 +59,7 @@ The sentence is then fed into the sentiment analyzer function that uses an API c
 a third part sentiment analyzer on the web to analyze whether the sentence has a
 positive sentiment or negative.
 
-###Sentiment Analysis API: http://text-processing.com/api/sentiment/
+##Sentiment Analysis API: http://text-processing.com/api/sentiment/
 For instance, if the word is “military”, the algorithm extracts all the sentences in
 which the words military has been used. Then each sentence is fed into the sentence
 analyzer to Tind out if the word military is used in a positive reference or a negative
